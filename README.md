@@ -1,4 +1,4 @@
-# 🎙️ Podcast Transcript Processing Pipeline
+# 🎙️ Listening Between The Lines: Analyzing Conversational Flow in Indian Podcasts
 
 ### *A Structured Workflow for Extracting, Cleaning, Translating & Analyzing YouTube Podcast Transcripts*
 
@@ -35,8 +35,7 @@ podcast_analysis_project/
 ├── src/
 │   ├── batch_download.py       # Batch transcript downloader
 │   ├── convert_json_to_text.py # JSON → TXT converter
-│   ├── batch_translate_to_english.py
-│   ├── clean_transcript.py
+│   ├── batch_translate_to_english.py│
 │   ├── extract_questions.py
 │   ├── text_stats.py        # Word & sentence count generator
 │   └── episode_list.txt        # List of YouTube URLs
