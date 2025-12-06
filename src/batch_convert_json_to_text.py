@@ -8,14 +8,14 @@ def convert_one(json_path: str, txt_path: str):
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    # data is a list of segments: [{ "text": "...", "start": ..., "duration": ...}, ...]
+    
     lines = []
     for seg in data:
         text = seg.get("text", "").strip()
         if text:
             lines.append(text)
 
-    # join segments with newline (or space if you prefer)
+    
     joined_text = "\n".join(lines)
 
     with open(txt_path, "w", encoding="utf-8") as out:
@@ -42,7 +42,7 @@ def main():
 
     for fname in files:
         json_path = os.path.join(RAW_DIR, fname)
-        base = os.path.splitext(fname)[0]   # e.g., "ep001_raw"
+        base = os.path.splitext(fname)[0]   
         txt_path = os.path.join(RAW_DIR, f"{base}.txt")
 
         print(f"\nConverting {json_path}")

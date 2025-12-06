@@ -6,7 +6,6 @@ INPUT_DIR = "data/cleaned_transcripts"
 OUTPUT_DIR = "outputs/samples"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# Heuristic patterns for questions without '?'
 QUESTION_PATTERNS = [
     r"\bwhat\b",
     r"\bwhy\b",
@@ -29,25 +28,25 @@ def clean_sentence(s):
 def is_question(sentence):
     s = sentence.lower().strip()
 
-    # Case 1: Ends with ?
+    
     if s.endswith("?"):
         return True
 
-    # Case 2: Starts with interrogative phrase
+   
     if pattern.search(s.split()[0]):
         return True
 
-    # Case 3: Contains interrogative word + is short enough
+    
     if pattern.search(s) and len(s) < 140:
         return True
 
     return False
 
 def extract_questions_from_text(text):
-    # Merge broken lines → single paragraph
+    
     text = " ".join(text.splitlines())
 
-    # Split into sentences
+    
     sentences = sent_tokenize(text)
 
     questions = []
