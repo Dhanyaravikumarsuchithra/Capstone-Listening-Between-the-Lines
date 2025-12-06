@@ -222,9 +222,3 @@ This repository aims to:
 * Bhavini Sai Mallu
 * Sameeksha Rao
 
-
-
-
-
-
->>>>>>> Initial project upload
